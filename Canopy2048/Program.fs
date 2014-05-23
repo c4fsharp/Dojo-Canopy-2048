@@ -40,7 +40,9 @@ open Interactions
 module program = 
 
     "starting a game of 2048" &&& fun _ ->
-    
+
+        printfn "Game started."
+            
         (*
         Task 1: start your browser.
         depending on what browser you prefer, 
@@ -124,10 +126,16 @@ module program =
 
 
 
+        // Just to make sure the test function
+        // ends properly.
+        printfn "Game ended."
+        ignore ()
+
+
     //run the "test", i.e. play a game
     run()
 
-    printfn "press [enter] to exit"
+    printfn "Press [enter] to exit."
     System.Console.ReadLine() |> ignore
 
     quit()
