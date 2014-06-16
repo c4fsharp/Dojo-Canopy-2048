@@ -15,11 +15,12 @@ The dojo progresses from:
 ##Potential pitfalls:
 * Canopy works with multiple browsers. By default, if firefox is installed, it should "just work". Other browsers, like Chrome or IE, will probably require the installation of a browser driver (chromedriver.exe or IEDriverServer.exe) in C:\. If the driver is not installed, a message box will show up, which should indicate where Canopy is looking for the driver, and therefore where the corresponding .exe file should be downloaded.
 * The Dojo works on Mono (OSX and Linux), with some potential caveats due to paths in mono. [MONO_IOMAP][mono-iomap] seemed to do the trick. 
-```#install fsharp, nuget
-nuget install 
-export MONO_IOMAP=all # tells mono to fix some backslash in paths issues
-fsharpc *.fs $(for i in **/*dll; do echo -r $i; done) # compile, passing dll's as resources
-MONO_PATH=$(for i in **/*dll; do echo -n $(dirname $i):; done) mono Program.exe # run, adding dlls' directories in  path
+```
+#install fsharp, nuget   
+nuget install   
+export MONO_IOMAP=all # tells mono to fix some backslash in paths issues   
+fsharpc *.fs $(for i in **/*dll; do echo -r $i; done) # compile, passing dll's as resources   
+MONO_PATH=$(for i in **/*dll; do echo -n $(dirname $i):; done) mono Program.exe # run, adding dlls' directories in  path   
 ```
 
 [canopy]: http://lefthandedgoat.github.io/canopy/ "Canopy"
