@@ -12,6 +12,17 @@ The dojo progresses from:
 * use the Interactions module, which contains a couple of pre-written functions, to terminate the loop if the game has been won or lost (task 6),
 * start writing a smarter bot and experimenting with strategies (tasks 7 and 8).
 
+##Running on OSX with Xamarin
+
+1. Download [Xamarin Studio]. The Starter edition should work fine for this Dojo. 
+2. Open terminal and type the following commands:
+
+```
+export MONO_IOMAP=all
+mkdir $HOME/.config/canopy
+open /Applications/Xamarin\ Studio.app/
+```
+
 ##Potential pitfalls:
 * Canopy works with multiple browsers. By default, if firefox is installed, it should "just work". Other browsers, like Chrome or IE, will probably require the installation of a browser driver (chromedriver.exe or IEDriverServer.exe) in C:\. If the driver is not installed, a message box will show up, which should indicate where Canopy is looking for the driver, and therefore where the corresponding .exe file should be downloaded.
 * The Dojo works on Mono (OSX and Linux), with some potential caveats due to paths in mono. [MONO_IOMAP][mono-iomap] seemed to do the trick. 
@@ -26,3 +37,4 @@ MONO_PATH=$(for i in **/*dll; do echo -n $(dirname $i):; done) mono Program.exe 
 [canopy]: http://lefthandedgoat.github.io/canopy/ "Canopy"
 [2048]: http://gabrielecirulli.github.io/2048/ "2048"
 [mono-iomap]: http://mono-project.com/MONO_IOMAP "MONO IOMAP"
+[Xamarin Studio]: http://xamarin.com/download
