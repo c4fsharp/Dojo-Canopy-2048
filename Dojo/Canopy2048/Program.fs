@@ -39,6 +39,9 @@ open Interactions
 
 module program = 
 
+    canopy.configuration.optimizeBySkippingIFrameCheck <- true
+    canopy.configuration.optimizeByDisablingCoverageReport <- true
+
     "starting a game of 2048" &&& fun _ ->
 
         printfn "Game started."

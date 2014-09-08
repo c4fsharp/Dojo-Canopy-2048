@@ -5,13 +5,22 @@ open runner
 
 module Interactions =
 
-    let lost () =
-        match someElement ".game-message.game-over" with
+    let lostSelector = css ".game-message.game-over"
+    let winSelector = css ".game-message.game-won"
+    let gameOverSelector = css ".game-message.game-won, .game-message.game-over"
+
+    let lost () =        
+        match someElement <| lostSelector with
+        | None -> false
+        | Some(_) -> true
+        
+    let won () =        
+        match someElement <| winSelector with
         | None -> false
         | Some(_) -> true
 
-    let won () =
-        match someElement ".game-message.game-won" with
+    let gameEnded () =
+        match someElement <| gameOverSelector with
         | None -> false
         | Some(_) -> true
 
