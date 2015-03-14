@@ -40,6 +40,9 @@ open Canopy2048
 open canopy
 open runner
 open System
+
+canopy.configuration.optimizeBySkippingIFrameCheck <- true
+canopy.configuration.optimizeByDisablingCoverageReport <- true
     
 (*
 Task 1: start your browser.
