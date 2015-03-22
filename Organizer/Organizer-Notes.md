@@ -4,7 +4,7 @@ The goal of the Dojo is two-fold:
 * provide a basic introduction to [Canopy][canopy], a F# web UI testing library,
 * write a game loop to automatically play the game of [2048][2048], against the actual game page. 
 
-The Dojo itself doesn't require much in terms of introduction. Play a game of 2048 live to demonstrate the rules (4 actions are possible, press up/down/left/right, adjacent tiles of same value get collapsed into one, the goal is to get a 2048 tile) - and then direct people to the file "Program.fs", which is a console app containing a set of Tasks leading to a basic working bot.
+The Dojo itself doesn't require much in terms of introduction. Play a game of 2048 live to demonstrate the rules (4 actions are possible, press up/down/left/right, adjacent tiles of same value get collapsed into one, the goal is to get a 2048 tile) - and then direct people to the file `Program.fs`, which is a console app containing a set of Tasks leading to a basic working bot. For people who prefer to work with F# interactive, you can direct them to `Script.fsx`.
 
 The dojo progresses from:
 * using basic Canopy commands, to start the browser and communicate with the 2048 page (tasks 1 to 4),
